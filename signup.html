@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="signup.css" />
+    <script src="src.js"></script>
+  </head>
+  <body>
+    <div style="text-align: center; margin-top: 150px">
+      <h1>Sign Up</h1>
+      <form action="sign.php" method="post" name="f" onsubmit="return verif()">
+        <div>
+          <label>Date of Birth</label><br />
+          <input
+            type="number"
+            id="day"
+            name="day"
+            placeholder="DD"
+            min="1"
+            max="31"
+            style="width: 60px"
+          />
+          <input
+            type="number"
+            id="month"
+            name="month"
+            placeholder="MM"
+            min="1"
+            max="12"
+            style="width: 60px"
+          />
+          <input
+            type="number"
+            id="year"
+            name="year"
+            placeholder="YYYY"
+            min="1900"
+            max="2023"
+            style="width: 80px"
+          /><br />
+        </div>
+        <div>
+          <label for="username">Username</label><br />
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="username username2"
+            style="text-align: center"
+          /><br />
+        </div>
+        <div>
+          <label for="Email">Email</label><br />
+          <input
+            type="email"
+            id="Email"
+            name="email"
+            placeholder="test@gmail.com"
+            style="text-align: center"
+          /><br />
+        </div>
+        <div>
+          <label for="phone">Phone Number</label><br />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="12345678"
+            style="text-align: center"
+          /><br />
+        </div>
+
+        <div>
+          <label for="password">Password</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="********"
+            style="text-align: center"
+          /><br />
+          <input type="checkbox" id="showPassword" onclick="togglePassword()" />
+          <label for="showPassword">Show Password</label>
+        </div>
+        <br />
+        <button type="submit" class="button">Sign Up</button>
+        <button type="reset" class="button">Cancel</button>
+        <p>Already have an account? <a href="index.html">Login</a></p>
+      </form>
+      <br />
+    </div>
+
+    <script>
+      function togglePassword() {
+        const passwordField = document.getElementById("password");
+        passwordField.type =
+          passwordField.type === "password" ? "text" : "password";
+      }
+    </script>
+  </body>
+</html>

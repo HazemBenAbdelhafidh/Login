@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="src.js"></script>
+  </head>
+  <body>
+    <div style="text-align: center; margin-top: 150px">
+      <h1>Login</h1>
+      <form action="login.php" method="post" name="f" onsubmit="return verif()">
+        <div>
+          <label for="username">Username</label><br />
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="username1 username2"
+            style="text-align: center"
+          /><br />
+        </div>
+        <div>
+          <label for="Email">Email</label><br />
+          <input
+            type="email"
+            id="Email"
+            name="email"
+            placeholder="test@gmail.com"
+            style="text-align: center"
+          /><br />
+        </div>
+
+        <div>
+          <label for="password">Password</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="********"
+            style="text-align: center"
+          /><br />
+          <input type="checkbox" id="showPassword" onclick="togglePassword()" />
+          <label for="showPassword">Show Password</label>
+        </div>
+        <br />
+        <button type="submit" class="button">Login</button>
+        <button type="reset" class="button">Cancel</button>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </form>
+
+      <br />
+    </div>
+
+    <script>
+      function togglePassword() {
+        const passwordField = document.getElementById("password");
+        passwordField.type =
+          passwordField.type === "password" ? "text" : "password";
+      }
+    </script>
+  </body>
+</html>
